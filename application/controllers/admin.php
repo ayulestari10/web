@@ -13,7 +13,6 @@ class Admin extends CI_Controller{
 		}
 	}
 
-	// Method ini digunakan untuk masuk ke halaman admin yang berisi daftar siswa dan beberapa menu (tambah admin, input pengumuman, dan lihat pengumuman).
 	function index(){
 		$data = array(
 			'nisn'		=> $this->uri->segment(3),
@@ -24,7 +23,6 @@ class Admin extends CI_Controller{
 		$this->load->view('includes/template', $data);
 	}
 
-	//Method ini digunakan untuk menampilkan pengumuman hasil seleksi.
 	function pengumuman_lulus(){
 		$data = array(
 			'nisn'		=> $this->uri->segment(3),
@@ -35,7 +33,6 @@ class Admin extends CI_Controller{
 		$this->load->view('includes/template', $data);
 	}						
 
-	// Method ini digunakan untuk mengedit password siswa dan melihat data siswa.
 	function edit_siswa(){
 		$nisn = $this->uri->segment(3);
 
@@ -60,7 +57,6 @@ class Admin extends CI_Controller{
 		$this->load->view('includes/template', $data);
 	}
 
-	// Method ini digunakan untuk menghapus siswa.
 	function delete_siswa(){
 		$nisn = $this->uri->segment(3);
 		if(isset($nisn)){

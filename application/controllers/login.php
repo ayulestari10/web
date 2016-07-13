@@ -17,7 +17,7 @@ class Login extends CI_Controller{
 				$this->session->set_userdata($data);
 				redirect('siswa');
 			} else {
-				$this->session->set_flashdata('msg', '<div class="alert alert-danger" style="text-align:center;">Gagal Login!</div>'); // data otomatis terunset jika refresh halaman
+				$this->session->set_flashdata('msg', '<div class="alert alert-danger" style="text-align:center;">Gagal Login!</div>'); 
 				redirect('login/siswa');
 				exit;
 			}
@@ -41,7 +41,7 @@ class Login extends CI_Controller{
 				$this->session->set_userdata($data);
 				redirect('admin');
 			} else {
-				$this->session->set_flashdata('msg', '<div class="alert alert-danger" style="text-align:center;">Gagal Login!</div>'); // data otomatis terunset jika refresh halaman
+				$this->session->set_flashdata('msg', '<div class="alert alert-danger" style="text-align:center;">Gagal Login!</div>'); 
 				redirect('login/admin');
 				exit;
 			}

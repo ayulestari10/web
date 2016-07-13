@@ -126,7 +126,7 @@
 	          width:'200px',
 	          showPrevMonth: true,
 	          showNextMonth: true,
-	          date: new Date(2016,07,12)}).render();
+	          date: new Date(2016,07,13)}).render();
 
 	});
 </script>

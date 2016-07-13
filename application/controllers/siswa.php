@@ -84,22 +84,17 @@ class Siswa extends CI_Controller{
 	
 	public function kartu_peserta() {
         $data = array(
-        	'data' 		=> $this->siswa_model->get_data_bynisn($this->session->userdata('nisn')),
+        	'data' 	=> $this->siswa_model->get_data_bynisn($this->session->userdata('nisn')),
         	'nisn'	=> $this->siswa_model->get_id($this->session->userdata('nisn'))
         );
-        //load the view and saved it into $html variable
         $html = $this->load->view('kartu', $data, true);
  
-        //this the the PDF filename that user will get to download
         $pdfFilePath = $this->session->userdata('nisn').".pdf";
  
-        //load mPDF library
         $this->load->library('m_pdf');
  
-       //generate the PDF from the given html
         $this->m_pdf->pdf->WriteHTML($html);
  
-        //download it.
         $this->m_pdf->pdf->Output($pdfFilePath, "D");        
     }
 
@@ -108,19 +103,14 @@ class Siswa extends CI_Controller{
         	'data' 		=> $this->siswa_model->get_data_bynisn($this->session->userdata('nisn')),
         	'nisn'	=> $this->siswa_model->get_id($this->session->userdata('nisn'))
         );
-        //load the view and saved it into $html variable
         $html = $this->load->view('formulir_pendaftaran', $data, true);
  
-        //this the the PDF filename that user will get to download
         $pdfFilePath = $this->session->userdata('nisn').".pdf";
  
-        //load mPDF library
         $this->load->library('m_pdf');
  
-       //generate the PDF from the given html
         $this->m_pdf->pdf->WriteHTML($html);
  
-        //download it.
         $this->m_pdf->pdf->Output($pdfFilePath, "D");        
     }
 	

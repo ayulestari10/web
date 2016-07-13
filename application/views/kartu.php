@@ -26,13 +26,13 @@
 	<div class="box">
 		<div class="header">
 			<h1>PESERTA</h1>
-			<span>No. <?= $id_siswa ?></span>
+			<span>No. <?= $data->no_pendaftaran ?></span>
 			<img src="<?= base_url('assets/img/line.jpg') ?>" class="line">
 		</div>
 		<div class="body">
 			<span><strong>Jalur Tertulis</strong></span>
 			<div class="foto">
-				<img src="<?= base_url('foto/'.$id_siswa.'.png') ?>" width="144" height="216" />
+				<img src="<?= base_url('foto/'.$data->nisn.'.png') ?>" width="144" height="216" />
 			</div>
 			<span><strong><?= $data->nama ?></strong></span><br>
 			<span><strong><?= $data->nisn ?></strong></span><br>

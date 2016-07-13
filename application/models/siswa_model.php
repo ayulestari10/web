@@ -14,45 +14,40 @@ class Siswa_model extends CI_Model{
 		$this->galerry_path_url = base_url().'foto/';
 	}
 
-	// Method ini digunakan untuk mengambil semua data siswa
 	function get_all(){
-		$query = $this->db->get($this->table); // SELECT * FROM siswa
+		$query = $this->db->get($this->table); 
 		return $query->result();
 	}
 
-	// Method ini digunakan untuk mengambil 1 baris data siswa sesuai dengan nisnnya
+	
 	function get_data_bynisn($nisn){
-		$this->db->where($this->key, $nisn); // SELECT * FROM siswa WHERE nisn = $nisn
+		$this->db->where($this->key, $nisn); 
 		$query = $this->db->get($this->table);
 		return $query->row();
 	}
 
-	// Method ini digunakan untuk menginput data ke table siswa
 	function insert($data){
-		return $this->db->insert($this->table, $data); // INSERT INTO siswa(nisn,..) VALUES ('ayu',..)
+		return $this->db->insert($this->table, $data); 
 	}
 
-	// Method ini digunakan untuk mengupdate data siswa sesuai dengan nisnnya
 	function update($nisn, $data){
-		$this->db->where($this->key, $nisn); // UPDATE siswa SET nisn= 'Azhary', nisn ='9', password ='4kuGanteng' WHERE nisn= $nisn
+		$this->db->where($this->key, $nisn); 
 		return $this->db->update($this->table, $data);
 	}
 
-	// Method ini digunakan untuk menghapus 1 baris data siswa sesuai dengan nisnnya
 	function delete($nisn){
-		return $this->db->delete($this->table, array($this->key => $nisn)); // DELETE FROM siswa WHERE nisn = $nisn
+		return $this->db->delete($this->table, array($this->key => $nisn)); 
 	}
 
-	// Method ini digunakan untuk mengambil data 
 	function get_data_byConditional($condition){
 		$this->db->where($condition);
 		$query = $this->db->get($this->table);
 		return $query;
 	}
 
-	// Method ini digunakan untuk mengambil 1 baris data siswa sesuai nisnnya dan mengembalikan id siswa tersebut
+
 	function get_id($nisn){
-		$this->db->where($this->key, $nisn); // SELECT * FROM siswa WHERE nisn = $nisn
+		$this->db->where($this->key, $nisn); 
 		$query = $this->db->get($this->table);
 		foreach ($query->result() as $row) {
 			$nisn = $row->nisn;
@@ -69,7 +64,6 @@ class Siswa_model extends CI_Model{
 	}
 
 	function do_upload($nisn){
-		//unlink(realpath(APPPATH . '../foto/' . $nisn . '.png'));
 
 		$config = array (
 			'file_name' 	=> $nisn.'.png',

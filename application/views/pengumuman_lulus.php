@@ -20,7 +20,7 @@
 		.bigContentpg{
 			border-radius: 5%;
 			background-color: rgb(57,167,141);
-			width: 855px; height: 380px; margin-left: 30px; 
+			width: 855px; min-height: 380px; margin-left: 30px; 
 		}
 		.boxes{background-color: rgb(102, 204, 0);}
 		.isipg{
@@ -28,7 +28,7 @@
 			width: 650px; height: auto;	
 		}
 		.pengumuman{
-			margin-left: 150px; width: 650px; height: 660px;
+			margin-left: 150px; width: 650px; min-height: 380px;
 		}
 		.pengumuman table{margin-right: 2%;}
 		.footerpg{margin-top: -43px; text-align: center;}
