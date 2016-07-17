@@ -34,7 +34,7 @@
        <tr>
         <td>Nama Calon Siswa</td>
         <td>:</td>
-        <td><input type="text" name="nama" class="form-control" /></td>
+        <td><input type="text" name="nama" class="form-control" value="<?= $data->nama ?>" /></td>
        </tr>
 
        <tr>
@@ -56,9 +56,9 @@
         <td>Tempat Tanggal Lahir</td>
         <td>:</td>
         <td>
-         <input type="text" name="tempat_lahir" class="form-control" />
+         <input type="text" name="tempat_lahir" class="form-control" value="<?= $data->tempat_lahir ?>" />
           <span>DD/ MM/ YYYY</span><br>
-         <input type="text" name="tanggal"/> / <input type="text" name="bulan"/> / <input type="text" name="tahun"/>
+         <input type="text" name="tanggal" value="<?= $data->tanggal ?>"/> / <input type="text" name="bulan" value="<?= $data->bulan ?>"/> / <input type="text" name="tahun" value="<?= $data->tahun ?>"/>
         </td>
        </tr>
 
@@ -66,20 +66,20 @@
         <td>Alamat</td>
         <td>:</td>
         <td>
-         <textarea name="alamat_lengkap" class="form-control"></textarea>
+         <textarea name="alamat_lengkap" class="form-control"><?= $data->alamat_lengkap ?></textarea>
         </td>
        </tr>
 
        <tr>
         <td>No Telp/Hp</td>
         <td>:</td>
-        <td><input type="text" name="no_telp_hp" class="form-control" /></td>
+        <td><input type="text" name="no_telp_hp" class="form-control" value="<?= $data->no_telp_hp ?>" /></td>
        </tr>
 
        <tr>
         <td>Email</td>
         <td>:</td>
-        <td><input type="text" name="email" class="form-control" /></td>
+        <td><input type="text" name="email" class="form-control" value="<?= $data->email ?>" /></td>
        </tr>
 
        <tr>
@@ -118,19 +118,19 @@
       <tr>
        <td>Nama Sekolah</td>
        <td>:</td>
-       <td><input type="text" name="nama_sekolah" class="form-control" /></td>
+       <td><input type="text" name="nama_sekolah" class="form-control"  value="<?= $data->nama_sekolah ?>"/></td>
       </tr>
 
       <tr>
        <td>Tahun Lulus</td>
        <td>:</td>
-       <td><input type="text" name="tahun_lulus" class="form-control" /></td>
+       <td><input type="text" name="tahun_lulus" class="form-control"  value="<?= $data->tahun_lulus ?>"/></td>
       </tr>
 
       <tr>
        <td>No STTB SMP</td>
        <td>:</td>
-       <td><input type="text" name="no_sttb" class="form-control" /></td>
+       <td><input type="text" name="no_sttb" class="form-control" value="<?= $data->no_sttb ?>" /></td>
       </tr>
 
       <tr>
@@ -158,25 +158,25 @@
       <tr>
        <td>Bahasa Inggris</td>
        <td>:</td>
-       <td><input type="text" name="nilai_bing" class="form-control" /></td>
+       <td><input type="text" name="nilai_bing" class="form-control" value="<?= $data->nilai_bing ?>" /></td>
       </tr>
 
       <tr>
        <td>Bahasa Indonesia</td>
        <td>:</td>
-       <td><input type="text" name="nilai_bindo" class="form-control" /></td>
+       <td><input type="text" name="nilai_bindo" class="form-control" value="<?= $data->nilai_bindo ?>" /></td>
       </tr>
 
       <tr>
        <td>Matematika</td>
        <td>:</td>
-       <td><input type="text" name="nilai_matematika" class="form-control" /></td>
+       <td><input type="text" name="nilai_matematika" class="form-control" value="<?= $data->nilai_matematika ?>" /></td>
       </tr>
 
       <tr>
        <td>IPA</td>
        <td>:</td>
-       <td><input type="text" name="nilai_ipa" class="form-control" /></td>
+       <td><input type="text" name="nilai_ipa" class="form-control" value="<?= $data->nilai_ipa ?>" /></td>
       </tr>
      </tbody>
     </table>
@@ -203,13 +203,13 @@
       <tr>
        <td>Nama Ayah</td>
        <td>:</td>
-       <td><input type="text" name="nama_ayah" class="form-control" /></td>
+       <td><input type="text" name="nama_ayah" class="form-control" value="<?= $data->nama_ayah ?>" /></td>
       </tr>
 
       <tr>
        <td>Nama Ibu</td>
        <td>:</td>
-       <td><input type="text" name="nama_ibu" class="form-control" /></td>
+       <td><input type="text" name="nama_ibu" class="form-control" value="<?= $data->nama_ibu ?>" /></td>
       </tr>
 
       <tr>

@@ -28,6 +28,17 @@ class Admin extends CI_Controller{
 		redirect('login/admin');
 	}
 
+	function detail(){
+		$nisn = $this->uri->segment(3);
+
+		$data = array(
+			'data' 		=> $this->siswa_model->get_data_bynisn($nisn),
+			'title'		=> 'Edit Pengumuman | Penerimaan Siswa Baru',
+			'content'	=> 'detail'
+		);
+		$this->load->view('includes/template', $data);
+	}
+
 	function pengumuman_lulus(){
 		$data = array(
 			'nisn'		=> $this->uri->segment(3),
