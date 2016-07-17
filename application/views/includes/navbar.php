@@ -13,5 +13,20 @@
       </button>
       <a class="navbar-brand" href="<?= base_url('home') ?>"><h3 style="margin-top: -2%;">Penerimaan Siswa Baru</h3></a>
     </div>
+
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            <?php 
+                $username   = $this->session->userdata('username');
+                $nisn       = $this->session->userdata('nisn');
+                if(isset($nisn)){
+                    echo '<a href="'.base_url('siswa/logout_siswa').'" class="btn btn-primary btn-lg" role="button">LOGOUT</a>';
+                } else{
+                    echo '<a href="'.base_url('admin/logout_admin').'" class="btn btn-primary btn-lg" role="button">LOGOUT</a>';
+                } 
+            ?>    
+        </li>
+    </ul>
+
   </div><!-- /.container-fluid -->
 </nav>

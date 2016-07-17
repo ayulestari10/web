@@ -27,7 +27,7 @@
 								<td>Foto</td>
 								<td></td>
 								<td>
-									<img src="<?= base_url('foto/'.$data->nisn.'.png') ?>">
+									<img src="<?= base_url('foto/'.$data->nisn.'.png') ?>" width="144" height="216">
 								</td>
 							</tr>
 

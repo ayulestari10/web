@@ -23,6 +23,11 @@ class Admin extends CI_Controller{
 		$this->load->view('includes/template', $data);
 	}
 
+	function logout_admin(){
+		$this->session->unset_userdata('username');
+		redirect('login/admin');
+	}
+
 	function pengumuman_lulus(){
 		$data = array(
 			'nisn'		=> $this->uri->segment(3),

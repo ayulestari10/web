@@ -20,6 +20,11 @@ class Siswa extends CI_Controller{
 		$this->load->view('includes/template', $data);
 	}
 
+	function logout_siswa(){
+		$this->session->unset_userdata('nisn');
+		redirect('login/siswa');
+	}
+
 	function input_data(){
 
 		if($this->input->post('input_data')){

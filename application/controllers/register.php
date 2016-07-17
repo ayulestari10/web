@@ -34,7 +34,7 @@ class Register extends CI_Controller{
 				else {
 					$this->session->set_flashdata('msg', '<div class="alert alert-warning" style="text-align:center;">nisn yang anda masukkan telah terdaftar sebelumnya.</div>');
 				}
-				$this->index();
+				redirect('login/siswa');
 			} 
 			else {
 				$this->session->set_flashdata('msg', '<div class="alert alert-danger" style="text-align:center;">Password harus sama dengan Konfirmasi Password</div>');
