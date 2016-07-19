@@ -4,6 +4,9 @@
 </style>
 <div class="container">
 	<div class="row">
+		<div class="col-md-2" style="margin-bottom: 2%;">
+			<a href="<?= base_url('admin/cetak_pengumuman') ?>" class="btn btn-danger">Cetak Pengumuman</a>
+		</div>
 		<div class="col-md-10">
 			<h2 style="text-align: center;">Data Calon Siswa</h1>
 			<table class="table table-striped">
@@ -18,7 +21,7 @@
 					<?php $i = 0; ?>
 					<?php foreach($dt as $data): ?>
 					<tr>
-						<td><?= ++$i ?></td>
+						<td><?= ++$i.'.' ?></td>
 						<td><?= $data->no_pendaftaran ?></td>
 						<td><?= $data->nama ?></td>
 						<td><?= $data->nama_sekolah ?></td>

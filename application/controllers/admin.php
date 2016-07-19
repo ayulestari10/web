@@ -47,7 +47,23 @@ class Admin extends CI_Controller{
 			'content'	=> 'pengumuman_lulus'
 		);
 		$this->load->view('includes/template', $data);
-	}						
+	}
+
+	function cetak_pengumuman(){
+		$data = array(
+			'dt' 	=> $this->siswa_model->get_all()
+		);
+
+        $html = $this->load->view('cetak_pengumuman', $data, true);
+ 
+        $pdfFilePath = "Pengumuman Hasil Seleksi.pdf";
+ 
+        $this->load->library('m_pdf');
+ 
+        $this->m_pdf->pdf->WriteHTML($html);
+ 
+        $this->m_pdf->pdf->Output($pdfFilePath, "D");  
+	}				
 
 	function edit_siswa(){
 		$nisn = $this->uri->segment(3);
