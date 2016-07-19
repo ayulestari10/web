@@ -21,9 +21,10 @@
                 $nisn       = $this->session->userdata('nisn');
                 if(isset($nisn)){
                     echo '<a href="'.base_url('siswa/logout_siswa').'" class="btn btn-primary btn-lg" role="button">LOGOUT</a>';
-                } else{
+                }
+                if(isset($username)){
                     echo '<a href="'.base_url('admin/logout_admin').'" class="btn btn-primary btn-lg" role="button">LOGOUT</a>';
-                } 
+                }
             ?>    
         </li>
     </ul>
