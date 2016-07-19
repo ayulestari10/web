@@ -21,7 +21,7 @@
   <div id="biodata">
    <div class="row">
     <div class="col-md-11 col-md-offset-1">
-     <h1>Pendaftaran</h1>
+     <h1>Penerimaan</h1>
      <h2 style="margin-bottom: 4%;">BIODATA CALON SISWA</h2>
      <table class="table table-striped">
       <tbody>
@@ -47,8 +47,16 @@
         <td>Jenis Kelamin</td>
         <td>:</td>
         <td>
-         <input type="radio" name="jenis_kelamin" value="Laki-laki"/>Laki-laki<br>
-         <input type="radio" name="jenis_kelamin" value="Perempuan" />Perempuan
+        <?php if($data->jenis_kelamin == "Laki-laki"): ?>
+         <input type="radio" name="jenis_kelamin" value="Laki-laki" checked >Laki-laki<br>
+         <input type="radio" name="jenis_kelamin" value="Perempuan" >Perempuan
+        <?php elseif($data->jenis_kelamin == "Perempuan"): ?>
+          <input type="radio" name="jenis_kelamin" value="Laki-laki" checked >Laki-laki<br>
+          <input type="radio" name="jenis_kelamin" value="Perempuan" >Perempuan
+        <?php else: ?>
+          <input type="radio" name="jenis_kelamin" value="Laki-laki" >Laki-laki<br>
+          <input type="radio" name="jenis_kelamin" value="Perempuan" >Perempuan
+        <?php endif; ?>
         </td>
        </tr>
 
@@ -152,7 +160,7 @@
  <!-- Data Nilai -->
   <div id="data_nilai" class="row">
    <div class="col-md-11 col-md-offset-1">
-    <h2 style="margin-bottom: 4%;">NILAI UJIAN</h2>
+    <h2 style="margin-bottom: 4%;">NILAI UJIAN NASIONAL</h2>
     <table class="table table-striped">
      <tbody>
       <tr>
@@ -217,12 +225,51 @@
        <td>:</td>
        <td>
         <select name="pekerjaan_ayah" class="form-control">
+        
+        <?php if($data->pekerjaan_ayah == "Guru"): ?>
          <option value="Guru">Guru</option>
          <option value="TNI/POLRI">TNI/POLRI</option>
-         <option value="Karyawan Swasata">Karyawan Swasata</option>
+         <option value="Karyawan Swasata">Karyawan Swasta</option>
          <option value="Petani">Petani</option>
          <option value="Pedangang">Pedangang</option>
          <option value="Lainnya">Lainnya</option>
+        <?php elseif($data->pekerjaan_ayah == "TNI/POLRI"): ?>
+         <option value="TNI/POLRI">TNI/POLRI</option>
+         <option value="Guru">Guru</option>
+         <option value="Karyawan Swasata">Karyawan Swasta</option>
+         <option value="Petani">Petani</option>
+         <option value="Pedangang">Pedangang</option>
+         <option value="Lainnya">Lainnya</option>
+        <?php elseif($data->pekerjaan_ayah == "Karyawan Swasata"): ?> 
+         <option value="Karyawan Swasata">Karyawan Swasta</option>
+         <option value="TNI/POLRI">TNI/POLRI</option>
+         <option value="Guru">Guru</option>
+         <option value="Petani">Petani</option>
+         <option value="Pedangang">Pedangang</option>
+         <option value="Lainnya">Lainnya</option>
+        <?php elseif($data->pekerjaan_ayah == "Petani"): ?>
+         <option value="Petani">Petani</option>
+         <option value="TNI/POLRI">TNI/POLRI</option>
+         <option value="Guru">Guru</option>
+         <option value="Karyawan Swasata">Karyawan Swasta</option>
+         <option value="Pedangang">Pedangang</option>
+         <option value="Lainnya">Lainnya</option>
+        <?php elseif($data->pekerjaan_ayah == "Pedangang"): ?>
+         <option value="Pedangang">Pedangang</option>
+         <option value="TNI/POLRI">TNI/POLRI</option>
+         <option value="Guru">Guru</option>
+         <option value="Karyawan Swasata">Karyawan Swasta</option>
+         <option value="Petani">Petani</option>
+         <option value="Lainnya">Lainnya</option>
+        <?php else: ?>
+         <option value="Lainnya">Lainnya</option>
+         <option value="TNI/POLRI">TNI/POLRI</option>
+         <option value="Guru">Guru</option>
+         <option value="Karyawan Swasata">Karyawan Swasta</option>
+         <option value="Petani">Petani</option>
+         <option value="Pedangang">Pedangang</option>
+        <?php endif; ?>
+
         </select>
        </td>
       </tr>

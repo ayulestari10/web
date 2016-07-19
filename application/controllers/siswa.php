@@ -57,7 +57,7 @@ class Siswa extends CI_Controller{
 			$this->siswa_model->do_upload($nisn);
 
 			$this->session->set_flashdata('msg', '<div class="alert alert-success" style="text-align:center;">Data berhasil disimpan!</div>');
-			redirect('siswa');
+			redirect('siswa/periksa');
 			exit;
 		}
 			

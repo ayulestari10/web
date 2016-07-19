@@ -7,7 +7,7 @@
 		<div class="biodata">
 			<div class="row">
 				<div class="col-md-11 col-md-offset-1">
-					<h1>Pendaftaran</h1>
+					<h1>Penerimaan</h1>
 					<h2 style="margin-bottom: 4%;">BIODATA CALON SISWA</h2>
 					<table class="table table-striped">
 						<tbody>
@@ -106,7 +106,7 @@
 	<!-- Data Nilai -->
 		<div class="row">
 			<div class="col-md-11 col-md-offset-1">
-				<h2 style="margin-bottom: 4%;">NILAI UJIAN</h2>
+				<h2 style="margin-bottom: 4%;">NILAI UJIAN NASIONAL</h2>
 				<table class="table table-striped">
 					<tbody>
 						<tr>

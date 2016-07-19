@@ -11,7 +11,7 @@
 		<div class="biodata">
 			<div class="row">
 				<div class="col-md-11 col-md-offset-1">
-					<h1 style="text-align: center;">FORMULIR PENDAFTARAN</h1>
+					<h1 style="text-align: center;">FORMULIR PENERIMAAN SISWA BARU</h1>
 					<h2 style="margin-bottom: 5%;">BIODATA CALON SISWA</h2>
 					<div class="foto">
 						<img src="<?= base_url('foto/'.$data->nisn.'.png') ?>" width="110" height="130" />
@@ -105,7 +105,7 @@
 	<!-- Data Nilai -->
 		<div class="row">
 			<div class="col-md-11 col-md-offset-1">
-				<h2 style="margin-bottom: 5%;">NILAI UJIAN</h2>
+				<h2 style="margin-bottom: 5%;">NILAI UJIAN NASIONAL</h2>
 				<table class="table table-striped">
 					<tbody>
 						<tr>
