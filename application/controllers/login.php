@@ -4,14 +4,17 @@ class Login extends CI_Controller{
 	function __construct(){
 		parent::__construct();
 		$this->load->model('login_model');
+		$this->load->model('siswa_model');
 	}
 
 	function siswa(){
 		if($this->input->post('login')){
-			$data = array(
-				'nisn'		=> $this->input->post('nisn'),
-				'password' 	=> md5($this->input->post('password'))
-			);
+			
+			echo $this->input->post('nisn')."<br>";
+			echo md5($this->input->post('password'))."<br>";
+			echo $this->siswa_model->get_id($this->input->post('nisn'));
+			exit;
+			
 			$data_siswa = $this->login_model->cek_login_siswa($data);
 			if($this->login_model->rows == 1){
 				$this->session->set_userdata($data);

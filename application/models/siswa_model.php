@@ -9,7 +9,7 @@ class Siswa_model extends CI_Model{
 	function __construct(){
 		parent::__construct();
 		$this->table 			= 'siswa';
-		$this->key 				= 'nisn';
+		$this->key 				= 'no_pendaftaran';
 		$this->foto 			= realpath(APPPATH.'../foto');
 		$this->galerry_path_url = base_url().'foto/';
 	}
@@ -20,8 +20,8 @@ class Siswa_model extends CI_Model{
 	}
 
 	
-	function get_data_bynisn($nisn){
-		$this->db->where($this->key, $nisn); 
+	function get_data_byno_pendaftaran($no_pendaftaran){
+		$this->db->where($this->key, $no_pendaftaran); 
 		$query = $this->db->get($this->table);
 		return $query->row();
 	}
@@ -30,13 +30,13 @@ class Siswa_model extends CI_Model{
 		return $this->db->insert($this->table, $data); 
 	}
 
-	function update($nisn, $data){
-		$this->db->where($this->key, $nisn); 
+	function update($no_pendaftaran, $data){
+		$this->db->where($this->key, $no_pendaftaran); 
 		return $this->db->update($this->table, $data);
 	}
 
-	function delete($nisn){
-		return $this->db->delete($this->table, array($this->key => $nisn)); 
+	function delete($no_pendaftaran){
+		return $this->db->delete($this->table, array($this->key => $no_pendaftaran)); 
 	}
 
 	function get_data_byConditional($condition){
@@ -50,23 +50,23 @@ class Siswa_model extends CI_Model{
 		$this->db->where($this->key, $nisn); 
 		$query = $this->db->get($this->table);
 		foreach ($query->result() as $row) {
-			$nisn = $row->nisn;
+			$coba = $row->nama;
 		}
-		return $nisn;
+		return $coba;
 	}
 
 	function get_last_data(){
-		$data = $this->db->query('SELECT * FROM siswa ORDER BY nisn ASC LIMIT 1');
+		$data = $this->db->query('SELECT * FROM siswa ORDER BY no_pendaftaran ASC LIMIT 1');
 		foreach($data->result() as $row){
-			$nisn = $row->nisn;
+			$no_pendaftaran = $row->no_pendaftaran;
 		}
-		return $nisn;
+		return $no_pendaftaran;
 	}
 
-	function do_upload($nisn){
+	function do_upload($no_pendaftaran){
 
 		$config = array (
-			'file_name' 	=> $nisn.'.png',
+			'file_name' 	=> $no_pendaftaran.'.png',
 			'upload_path'	=> '/foto',
 			'allowed_types' => 'jpg|jpeg|gif|png',
 			'upload_path' 	=> $this->foto,

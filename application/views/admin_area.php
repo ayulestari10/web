@@ -15,6 +15,7 @@
 					<th style="width:250px;">No Registrasi</th>
 					<th style="width:250px;">Nama</th>
 					<th style="width:250px;">Asal Sekolah</th>
+					<th style="width:100px;">Hasil</th>
 					<th style="width:600px;"></th>
 				</thead>
 				<tbody>
@@ -25,6 +26,7 @@
 						<td><?= $data->no_pendaftaran ?></td>
 						<td><?= $data->nama ?></td>
 						<td><?= $data->nama_sekolah ?></td>
+						<td><?= $data->hasil ?></td>
 						<td>
 							<a href="<?= base_url('admin/detail/'.$data->nisn) ?>" style="margin-right: 4%;"><input type="submit" value="Detail" class="btn btn-success"/></a>
 							<a href="<?= base_url('admin/edit_siswa/'.$data->nisn) ?>" style="margin-right: 4%;"><input type="submit" value="Edit" class="btn btn-info" name="edit" /></a>
