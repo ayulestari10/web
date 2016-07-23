@@ -17,6 +17,11 @@ class Register extends CI_Controller{
 		if(isset($nisn, $password)){
 			if($this->input->post('password') == $this->input->post('password2')){
 				$this->load->model('siswa_model');
+
+				$this->load->model('sekolah_model');
+				$this->load->model('nilai_model');
+				$this->load->model('orang_tua_model');
+
 				$cek_data = $this->siswa_model->get_data_bynisn($nisn);
 				if(isset($cek_data->nisn)){
 					$data_nisn = $cek_data->nisn;
@@ -29,6 +34,13 @@ class Register extends CI_Controller{
 						'password'	=> md5($password)
 					);
 					$this->siswa_model->insert($data);
+
+					$no_pendaftaran	= $this->siswa_model->get_id($nisn);
+
+					$this->sekolah_model->insert(array('no_pendaftaran' => $no_pendaftaran));
+					$this->nilai_model->insert(array('no_pendaftaran' => $no_pendaftaran));
+					$this->orang_tua_model->insert(array('no_pendaftaran' => $no_pendaftaran));
+
 					$this->session->set_flashdata('msg', '<div class="alert alert-success" style="text-align:center;">Registrasi Berhasil</div>');
 				} 
 				else {

@@ -45,7 +45,7 @@
       <tr>
        <td>Nomor Induk Siswa Nasional (NISN)</td>
        <td>:</td>
-       <td><?= $data_sekolah->nisn ?></td>
+       <td><?= $nisn ?></td>
       </tr>
      </tbody>
     </table>

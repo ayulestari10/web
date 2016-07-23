@@ -9,12 +9,11 @@ class Login extends CI_Controller{
 
 	function siswa(){
 		if($this->input->post('login')){
-			
-			echo $this->input->post('nisn')."<br>";
-			echo md5($this->input->post('password'))."<br>";
-			echo $this->siswa_model->get_id($this->input->post('nisn'));
-			exit;
-			
+			$data = array(
+				'nisn'				=> $this->input->post('nisn'),
+				'password' 			=> md5($this->input->post('password')),
+				'no_pendaftaran'	=> $this->siswa_model->get_id($this->input->post('nisn'))
+			);
 			$data_siswa = $this->login_model->cek_login_siswa($data);
 			if($this->login_model->rows == 1){
 				$this->session->set_userdata($data);

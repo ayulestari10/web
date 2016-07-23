@@ -4,9 +4,9 @@ class Sekolah extends CI_Controller{
 	function __construct(){
 		parent::__construct();
 		$this->load->model('sekolah_model');
-		$nisn = $this->session->userdata('nisn');
+		$no_pendaftaran = $this->session->userdata('no_pendaftaran');
 
-		if (!isset($nisn)) {
+		if (!isset($no_pendaftaran)) {
 		   redirect('login/siswa');
 		   exit;
 		}
@@ -14,7 +14,7 @@ class Sekolah extends CI_Controller{
 	
 	function index(){
 		$data = array(
-			'data_sekolah' 		=> $this->sekolah_model->get_data_bynisn($this->session->userdata('nisn')),
+			'data_sekolah' 		=> $this->sekolah_model->get_data_byno_pendaftaran($this->session->userdata('no_pendaftaran')),
 			'title'				=> 'Penerimaan Siswa Baru',
 			'content'			=> 'data_sekolah'
 		);
@@ -27,15 +27,16 @@ class Sekolah extends CI_Controller{
 			$input = array (
 				'nama_sekolah'		=> $this->input->post('nama_sekolah'),
 				'tahun_lulus'		=> $this->input->post('tahun_lulus'),
-				'no_sttb'			=> $this->input->post('no_sttb')
+				'no_sttb'			=> $this->input->post('no_sttb'),
+				'nisn'				=> $this->session->userdata('nisn')
 			);
-			$this->sekolah_model->update($this->session->userdata('nisn'), $input);
+			$this->sekolah_model->update($this->session->userdata('no_pendaftaran'), $input);
 			redirect('nilai');
 			exit;
 		}
 			
 		$data = array(
-			'data_sekolah' 		=> $this->sekolah_model->get_data_bynisn($this->session->userdata('nisn')),
+			'data_sekolah' 		=> $this->sekolah_model->get_data_byno_pendaftaran($this->session->userdata('no_pendaftaran')),
 			'title'				=> 'Lengkapi Data | Penerimaan Siswa Baru',
 			'content'			=> 'data_sekolah'
 		);

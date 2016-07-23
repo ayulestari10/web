@@ -20,8 +20,8 @@ class Siswa_model extends CI_Model{
 	}
 
 	
-	function get_data_byno_pendaftaran($no_pendaftaran){
-		$this->db->where($this->key, $no_pendaftaran); 
+	function get_data_bynisn($nisn){
+		$this->db->where('nisn', $nisn); 
 		$query = $this->db->get($this->table);
 		return $query->row();
 	}
@@ -47,12 +47,14 @@ class Siswa_model extends CI_Model{
 
 
 	function get_id($nisn){
-		$this->db->where($this->key, $nisn); 
+		// $this->db->where(parameter1, parameter2); untuk parameter sesuaikan dgn data yang ingin dicari. Tidak mesti parameter 1 itu $this->key
+
+		$this->db->where('nisn', $nisn); 
 		$query = $this->db->get($this->table);
 		foreach ($query->result() as $row) {
-			$coba = $row->nama;
+			$no_pendaftaran = $row->no_pendaftaran;			
 		}
-		return $coba;
+		return $no_pendaftaran;
 	}
 
 	function get_last_data(){

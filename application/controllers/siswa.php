@@ -4,6 +4,10 @@ class Siswa extends CI_Controller{
 	function __construct(){
 		parent::__construct();
 		$this->load->model('siswa_model');
+		$this->load->model('sekolah_model');
+		$this->load->model('nilai_model');
+		$this->load->model('orang_tua_model');
+
 		$no_pendaftaran = $this->session->userdata('no_pendaftaran');
 		if (!isset($no_pendaftaran)) {
 		   redirect('login/siswa');
@@ -13,7 +17,7 @@ class Siswa extends CI_Controller{
 	
 	function index(){
 		$data = array(
-			'data_siswa' 		=> $this->siswa_model->get_data_byno_pendaftaran($this->session->userdata('no_pendaftaran')),
+			'data_siswa' 		=> $this->siswa_model->get_data_bynisn($this->session->userdata('nisn')),
 			'title'				=> 'Penerimaan Siswa Baru',
 			'content'			=> 'input_data'
 		);
@@ -45,12 +49,13 @@ class Siswa extends CI_Controller{
 			$this->siswa_model->update($this->session->userdata('no_pendaftaran'), $input);
 			$no_pendaftaran = $this->uri->segment(3);
 			$this->siswa_model->do_upload($no_pendaftaran);
+	
 			redirect('sekolah	');
 			exit;
 		}
 			
 		$data = array(
-			'data_siswa' 	=> $this->siswa_model->get_data_byno_pendaftaran($this->session->userdata('no_pendaftaran')),
+			'data_siswa' 	=> $this->siswa_model->get_data_bynisn($this->session->userdata('nisn')),
 			'title'			=> 'Lengkapi Data | Penerimaan Siswa Baru',
 			'content'		=> 'input_data'
 		);
