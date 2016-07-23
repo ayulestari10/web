@@ -9,9 +9,9 @@
 			echo $msg;
 		}
 
-		$nisn = $this->session->flashdata('nisn');
-		if (isset($nisn)) {
-		     echo form_open_multipart('admin/edit_siswa/'.$nisn);
+		$no_pendaftaran = $this->session->flashdata('no_pendaftaran');
+		if (isset($no_pendaftaran)) {
+		     echo form_open_multipart('admin/edit_siswa/'.$no_pendaftaran);
 		} else {
 		     echo form_open_multipart('admin/edit_siswa/');
 		}
