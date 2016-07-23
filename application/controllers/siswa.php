@@ -17,7 +17,7 @@ class Siswa extends CI_Controller{
 	
 	function index(){
 		$data = array(
-			'data_siswa' 		=> $this->siswa_model->get_data_bynisn($this->session->userdata('nisn')),
+			'data_siswa' 		=> $this->siswa_model->get_data_byno_pendaftaran($this->session->userdata('no_pendaftaran')),
 			'title'				=> 'Penerimaan Siswa Baru',
 			'content'			=> 'input_data'
 		);
@@ -50,12 +50,12 @@ class Siswa extends CI_Controller{
 			$no_pendaftaran = $this->uri->segment(3);
 			$this->siswa_model->do_upload($no_pendaftaran);
 	
-			redirect('sekolah	');
+			redirect('sekolah');
 			exit;
 		}
 			
 		$data = array(
-			'data_siswa' 	=> $this->siswa_model->get_data_bynisn($this->session->userdata('nisn')),
+			'data_siswa' 	=> $this->siswa_model->get_data_byno_pendaftaran($this->session->userdata('no_pendaftaran')),
 			'title'			=> 'Lengkapi Data | Penerimaan Siswa Baru',
 			'content'		=> 'input_data'
 		);
@@ -65,29 +65,32 @@ class Siswa extends CI_Controller{
 
 	function periksa(){
 		$data = array(
-			'data' 		=> $this->siswa_model->get_data_byno_pendaftaran($this->session->userdata('no_pendaftaran')),
-			'title'		=> 'Data | Penerimaan Siswa Baru',
-			'content'	=> 'view'
+			'data_siswa' 		=> $this->siswa_model->get_data_byno_pendaftaran($this->session->userdata('no_pendaftaran')),
+			'data_sekolah' 		=> $this->sekolah_model->get_data_byno_pendaftaran($this->session->userdata('no_pendaftaran')),
+			'data_nilai' 		=> $this->nilai_model->get_data_byno_pendaftaran($this->session->userdata('no_pendaftaran')),
+			'data_ortu' 		=> $this->orang_tua_model->get_data_byno_pendaftaran($this->session->userdata('no_pendaftaran')),
+			'title'				=> 'Data | Penerimaan Siswa Baru',
+			'content'			=> 'view'
 		);
 		$this->load->view('includes/template', $data);
 	}
 	
 	function kartu(){
 		$data = array(
-        	'data' 		=> $this->siswa_model->get_data_byno_pendaftaran($this->session->userdata('no_pendaftaran')),
-        	'no_pendaftaran'	=> $this->siswa_model->get_id($this->session->userdata('no_pendaftaran'))
+        	'data' 				=> $this->siswa_model->get_data_byno_pendaftaran($this->session->userdata('no_pendaftaran')),
+        	'data_sekolah' 		=> $this->sekolah_model->get_data_byno_pendaftaran($this->session->userdata('no_pendaftaran'))
         );
         $this->load->view('kartu', $data);
 	}
 	
 	public function kartu_peserta() {
         $data = array(
-        	'data' 	=> $this->siswa_model->get_data_byno_pendaftaran($this->session->userdata('no_pendaftaran')),
-        	'no_pendaftaran'	=> $this->siswa_model->get_id($this->session->userdata('no_pendaftaran'))
+        	'data' 				=> $this->siswa_model->get_data_byno_pendaftaran($this->session->userdata('no_pendaftaran')),
+        	'data_sekolah' 		=> $this->sekolah_model->get_data_byno_pendaftaran($this->session->userdata('no_pendaftaran'))
         );
         $html = $this->load->view('kartu', $data, true);
  
-        $pdfFilePath = $this->session->userdata('no_pendaftaran').".pdf";
+        $pdfFilePath = $this->session->userdata('nisn').".pdf";
  
         $this->load->library('m_pdf');
  
@@ -98,12 +101,13 @@ class Siswa extends CI_Controller{
 
     public function formulir() {
         $data = array(
-        	'data' 		=> $this->siswa_model->get_data_byno_pendaftaran($this->session->userdata('no_pendaftaran')),
-        	'no_pendaftaran'	=> $this->siswa_model->get_id($this->session->userdata('no_pendaftaran'))
-        );
+        	'data_siswa' 		=> $this->siswa_model->get_data_byno_pendaftaran($this->session->userdata('no_pendaftaran')),
+			'data_sekolah' 		=> $this->sekolah_model->get_data_byno_pendaftaran($this->session->userdata('no_pendaftaran')),
+			'data_nilai' 		=> $this->nilai_model->get_data_byno_pendaftaran($this->session->userdata('no_pendaftaran')),
+			'data_ortu' 		=> $this->orang_tua_model->get_data_byno_pendaftaran($this->session->userdata('no_pendaftaran')),        );
         $html = $this->load->view('formulir_pendaftaran', $data, true);
  
-        $pdfFilePath = $this->session->userdata('no_pendaftaran').".pdf";
+        $pdfFilePath = "Formulir ".$this->session->userdata('nisn').".pdf";
  
         $this->load->library('m_pdf');
  

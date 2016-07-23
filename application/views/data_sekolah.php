@@ -52,7 +52,7 @@
    </div>
   </div>
   <div class="row" style="margin-bottom: 3%">
-  <div class="col-md-2 col-md-offset-2">
+  <div class="col-md-2 col-md-offset-5">
    <a href="<?= base_url('nilai') ?>"><input type="submit" value="Selanjutnya" class="btn btn-success" name="input_sekolah"/></a>
    </div>
   </div>

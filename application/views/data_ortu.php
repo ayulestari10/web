@@ -83,12 +83,12 @@ s
          <option value="Petani">Petani</option>
          <option value="Lainnya">Lainnya</option>
         <?php else: ?>
-         <option value="Lainnya">Lainnya</option>
-         <option value="TNI/POLRI">TNI/POLRI</option>
          <option value="Guru">Guru</option>
+         <option value="TNI/POLRI">TNI/POLRI</option>
          <option value="Karyawan Swasata">Karyawan Swasta</option>
          <option value="Petani">Petani</option>
          <option value="Pedangang">Pedangang</option>
+         <option value="Lainnya">Lainnya</option>
         <?php endif; ?>
 
         </select>
@@ -100,12 +100,49 @@ s
        <td>:</td>
        <td>
         <select name="pekerjaan_ibu" class="form-control">
+         <?php if($data_ortu->pekerjaan_ibu == "Guru"): ?>
          <option value="Guru">Guru</option>
          <option value="TNI/POLRI">TNI/POLRI</option>
-         <option value="Karyawan Swasata">Karyawan Swasata</option>
+         <option value="Karyawan Swasata">Karyawan Swasta</option>
          <option value="Petani">Petani</option>
          <option value="Pedangang">Pedangang</option>
          <option value="Lainnya">Lainnya</option>
+        <?php elseif($data_ortu->pekerjaan_ibu == "TNI/POLRI"): ?>
+         <option value="TNI/POLRI">TNI/POLRI</option>
+         <option value="Guru">Guru</option>
+         <option value="Karyawan Swasata">Karyawan Swasta</option>
+         <option value="Petani">Petani</option>
+         <option value="Pedangang">Pedangang</option>
+         <option value="Lainnya">Lainnya</option>
+        <?php elseif($data_ortu->pekerjaan_ibu == "Karyawan Swasata"): ?> 
+         <option value="Karyawan Swasata">Karyawan Swasta</option>
+         <option value="TNI/POLRI">TNI/POLRI</option>
+         <option value="Guru">Guru</option>
+         <option value="Petani">Petani</option>
+         <option value="Pedangang">Pedangang</option>
+         <option value="Lainnya">Lainnya</option>
+        <?php elseif($data_ortu->pekerjaan_ibu == "Petani"): ?>
+         <option value="Petani">Petani</option>
+         <option value="TNI/POLRI">TNI/POLRI</option>
+         <option value="Guru">Guru</option>
+         <option value="Karyawan Swasata">Karyawan Swasta</option>
+         <option value="Pedangang">Pedangang</option>
+         <option value="Lainnya">Lainnya</option>
+        <?php elseif($data_ortu->pekerjaan_ibu == "Pedangang"): ?>
+         <option value="Pedangang">Pedangang</option>
+         <option value="TNI/POLRI">TNI/POLRI</option>
+         <option value="Guru">Guru</option>
+         <option value="Karyawan Swasata">Karyawan Swasta</option>
+         <option value="Petani">Petani</option>
+         <option value="Lainnya">Lainnya</option>
+        <?php else: ?>
+         <option value="Guru">Guru</option>
+         <option value="TNI/POLRI">TNI/POLRI</option>
+         <option value="Karyawan Swasata">Karyawan Swasta</option>
+         <option value="Petani">Petani</option>
+         <option value="Pedangang">Pedangang</option>
+         <option value="Lainnya">Lainnya</option>
+        <?php endif; ?>        
         </select>
        </td>
       </tr>

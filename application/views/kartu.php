@@ -32,11 +32,11 @@
 		<div class="body">
 			<span><strong>Jalur Tertulis</strong></span>
 			<div class="foto">
-				<img src="<?= base_url('foto/'.$data->nisn.'.png') ?>" width="144" height="216" />
+				<img src="<?= base_url('foto/'.$data->no_pendaftaran.'.png') ?>" width="144" height="216" />
 			</div>
 			<span><strong><?= $data->nama ?></strong></span><br>
 			<span><strong><?= $data->nisn ?></strong></span><br>
-			<span><?= $data->nama_sekolah ?></span><br>
+			<span><?= $data_sekolah->nama_sekolah ?></span><br>
 		</div>
 	</div>
 </div>

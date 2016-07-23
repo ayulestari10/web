@@ -14,14 +14,19 @@ class Siswa_model extends CI_Model{
 		$this->galerry_path_url = base_url().'foto/';
 	}
 
+	function update($no_pendaftaran, $data){
+		$this->db->where($this->key, $no_pendaftaran); 
+		return $this->db->update($this->table, $data);
+	}
+
 	function get_all(){
 		$query = $this->db->get($this->table); 
 		return $query->result();
 	}
 
 	
-	function get_data_bynisn($nisn){
-		$this->db->where('nisn', $nisn); 
+	function get_data_byno_pendaftaran($no_pendaftaran){
+		$this->db->where($this->key, $no_pendaftaran); 
 		$query = $this->db->get($this->table);
 		return $query->row();
 	}
@@ -30,10 +35,7 @@ class Siswa_model extends CI_Model{
 		return $this->db->insert($this->table, $data); 
 	}
 
-	function update($no_pendaftaran, $data){
-		$this->db->where($this->key, $no_pendaftaran); 
-		return $this->db->update($this->table, $data);
-	}
+	
 
 	function delete($no_pendaftaran){
 		return $this->db->delete($this->table, array($this->key => $no_pendaftaran)); 

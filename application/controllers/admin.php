@@ -5,6 +5,9 @@ class Admin extends CI_Controller{
 		parent::__construct();
 		$this->load->model('admin_model');
 		$this->load->model('siswa_model');
+		$this->load->model('sekolah_model');
+		$this->load->model('nilai_model');
+		$this->load->model('orang_tua_model');
 
 		$username = $this->session->userdata('username');
 		if (!isset($username)) {
@@ -15,10 +18,9 @@ class Admin extends CI_Controller{
 
 	function index(){
 		$data = array(
-			'nisn'		=> $this->uri->segment(3),
-			'dt' 		=> $this->siswa_model->get_all(),
-			'title'		=> 'Daftar Siswa | Penerimaan Siswa Baru',
-			'content'	=> 'admin_area'
+			'dt'		 			=> $this->admin_model->get_all_data(),
+			'title'					=> 'Daftar Siswa | Penerimaan Siswa Baru',
+			'content'				=> 'admin_area'
 		);
 		$this->load->view('includes/template', $data);
 	}
@@ -29,11 +31,15 @@ class Admin extends CI_Controller{
 	}
 
 	function detail(){
-		$nisn = $this->uri->segment(3);
+		$no_pendaftaran = $this->uri->segment(3);
 
 		$data = array(
-			'data' 		=> $this->siswa_model->get_data_bynisn($nisn),
-			'title'		=> 'Edit Pengumuman | Penerimaan Siswa Baru',
+			'data_siswa' 		=> $this->siswa_model->get_data_byno_pendaftaran($no_pendaftaran),
+			'data_sekolah' 		=> $this->sekolah_model->get_data_byno_pendaftaran($no_pendaftaran),
+			'data_nilai' 		=> $this->nilai_model->get_data_byno_pendaftaran($no_pendaftaran),
+			'data_ortu' 		=> $this->orang_tua_model->get_data_byno_pendaftaran($no_pendaftaran),
+
+			'title'		=> 'Detail Siswa | Penerimaan Siswa Baru',
 			'content'	=> 'detail'
 		);
 		$this->load->view('includes/template', $data);
@@ -41,7 +47,7 @@ class Admin extends CI_Controller{
 
 	function pengumuman_lulus(){
 		$data = array(
-			'nisn'		=> $this->uri->segment(3),
+			'no_pendaftaran'		=> $this->uri->segment(3),
 			'dt' 		=> $this->siswa_model->get_all(),
 			'title'		=> 'Pengumuman | Penerimaan Siswa Baru',
 			'content'	=> 'pengumuman_lulus'
@@ -51,7 +57,7 @@ class Admin extends CI_Controller{
 
 	function cetak_pengumuman(){
 		$data = array(
-			'dt' 	=> $this->siswa_model->get_all()
+			'dt' 	=> $this->admin_model->get_all_data()
 		);
 
         $html = $this->load->view('cetak_pengumuman', $data, true);
@@ -66,33 +72,33 @@ class Admin extends CI_Controller{
 	}				
 
 	function edit_siswa(){
-		$nisn = $this->uri->segment(3);
+		$no_pendaftaran = $this->uri->segment(3);
 
-		if (!isset($nisn)) {
+		if (!isset($no_pendaftaran)) {
 		    redirect('admin');
 		    exit;
 		}
 		if ($this->input->post('edit')){
 			$hasil = $this->input->post('hasil');
 
-			$this->siswa_model->update($nisn, array('hasil' => $hasil));
+			$this->siswa_model->update($no_pendaftaran, array('hasil' => $hasil));
 			$this->session->set_flashdata('msg', '<div class="alert alert-success" style="text-align:center;">Data berhasil diedit!</div>');
 			redirect('admin');
 		}
 
 		$data = array(
-			'data' 		=> $this->siswa_model->get_data_bynisn($nisn),
+			'data' 		=> $this->siswa_model->get_data_byno_pendaftaran($no_pendaftaran),
 			'title'		=> 'Edit Pengumuman | Penerimaan Siswa Baru',
 			'content'	=> 'edit_data_by_admin'
 		);
-		$this->session->set_flashdata('nisn', $nisn);
+		$this->session->set_flashdata('no_pendaftaran', $no_pendaftaran);
 		$this->load->view('includes/template', $data);
 	}
 
 	function delete_siswa(){
-		$nisn = $this->uri->segment(3);
-		if(isset($nisn)){
-			$this->siswa_model->delete($nisn);
+		$no_pendaftaran = $this->uri->segment(3);
+		if(isset($no_pendaftaran)){
+			$this->siswa_model->delete($no_pendaftaran);
 		} else {
 			redirect('admin');
 		}

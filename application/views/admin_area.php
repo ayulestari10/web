@@ -5,9 +5,9 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-2" style="margin-bottom: 2%;">
-			<a href="<?= base_url('admin/cetak_pengumuman') ?>" class="btn btn-danger">Cetak Pengumuman</a>
+			<a href="<?= base_url('admin/cetak_pengumuman') ?>"><button  class="btn btn-danger">Cetak Pengumuman</button></a>
 		</div>
-		<div class="col-md-10">
+		<div class="col-md-10" style="margin-left: -10%;">
 			<h2 style="text-align: center;">Data Calon Siswa</h1>
 			<table class="table table-striped">
 				<thead style="text-align: center;">
@@ -28,9 +28,9 @@
 						<td><?= $data->nama_sekolah ?></td>
 						<td><?= $data->hasil ?></td>
 						<td>
-							<a href="<?= base_url('admin/detail/'.$data->nisn) ?>" style="margin-right: 4%;"><input type="submit" value="Detail" class="btn btn-success"/></a>
-							<a href="<?= base_url('admin/edit_siswa/'.$data->nisn) ?>" style="margin-right: 4%;"><input type="submit" value="Edit" class="btn btn-info" name="edit" /></a>
-							<a href="<?= base_url('admin/delete_siswa/'.$data->nisn) ?>" style="margin-right: 4%;"><input type="submit" value="Hapus" class="btn btn-danger" /></a>
+							<a href="<?= base_url('admin/detail/'.$data->no_pendaftaran) ?>" style="margin-right: 4%;"><input type="submit" value="Detail" class="btn btn-success"/></a>
+							<a href="<?= base_url('admin/edit_siswa/'.$data->no_pendaftaran) ?>" style="margin-right: 4%;"><input type="submit" value="Edit" class="btn btn-info" name="edit" /></a>
+							<a href="<?= base_url('admin/delete_siswa/'.$data->no_pendaftaran) ?>" style="margin-right: 4%;"><input type="submit" value="Hapus" class="btn btn-danger" /></a>
 						</td>
 					</tr>
 					<?php endforeach; ?>

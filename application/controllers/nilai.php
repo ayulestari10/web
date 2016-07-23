@@ -4,9 +4,9 @@ class Nilai extends CI_Controller{
 	function __construct(){
 		parent::__construct();
 		$this->load->model('nilai_model');
-		$nisn = $this->session->userdata('nisn');
+		$no_pendaftaran = $this->session->userdata('no_pendaftaran');
 
-		if (!isset($nisn)) {
+		if (!isset($no_pendaftaran)) {
 		   redirect('login/siswa');
 		   exit;
 		}
@@ -14,7 +14,7 @@ class Nilai extends CI_Controller{
 	
 	function index(){
 		$data = array(
-			'data_nilai' 		=> $this->nilai_model->get_data_bynisn($this->session->userdata('nisn')),
+			'data_nilai' 		=> $this->nilai_model->get_data_byno_pendaftaran($this->session->userdata('no_pendaftaran')),
 			'title'				=> 'Penerimaan Siswa Baru',
 			'content'			=> 'data_nilai'
 		);
@@ -30,13 +30,13 @@ class Nilai extends CI_Controller{
 				'nilai_matematika'	=> $this->input->post('nilai_matematika'),
 				'nilai_ipa'			=> $this->input->post('nilai_ipa')
 			);
-			$this->nilai_model->update($this->session->userdata('nisn'), $input);
+			$this->nilai_model->update($this->session->userdata('no_pendaftaran'), $input);
 			redirect('orang_tua');
 			exit;
 		}
 			
 		$data = array(
-			'data_nilai' 		=> $this->nilai_model->get_data_bynisn($this->session->userdata('nisn')),
+			'data_nilai' 		=> $this->nilai_model->get_data_byno_pendaftaran($this->session->userdata('no_pendaftaran')),
 			'title'				=> 'Lengkapi Data | Penerimaan Siswa Baru',
 			'content'			=> 'data_nilai'
 		);
