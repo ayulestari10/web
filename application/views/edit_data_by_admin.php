@@ -18,7 +18,7 @@
 	?>
 	<!-- Biodata Diri -->
 		<div class="biodata">
-			<div class="row">
+			<div class="row">S
 				<div class="col-md-11 col-md-offset-1">
 					<h2 style="margin-bottom: 4%;">Edit Hasil Seleksi Calon Siswa</h2>
 					<table class="table table-striped">
@@ -36,13 +36,22 @@
 							</tr>
 
 							<tr>
+								<td>Skor</td>
+								<td>:</td>
+								<td><input type="text" name="skor" class="form-control" value="<?= $data->skor ?>" /></td>
+							</tr>
+
+							<tr>
 								<td>Hasil</td>
-								<td></td>
+								<td>:</td>
 								<td>
-									<select name="hasil" class="form-control">
-										<option value="Lulus">Lulus</option>
-										<option value="Tidak Lulus">Tidak Lulus</option>
-									</select>
+									<?php if($data->skor > 50): ?>
+									<input type="text" name="hasil" class="form-control" value="Lulus" />
+									<?php elseif($data->skor <50): ?>
+									<input type="text" name="hasil" class="form-control" value="Tidak Lulus" />
+									<?php else: ?>
+									<input type="text" name="hasil" class="form-control" value="Input Skor" />
+									<?php endif; ?>
 								</td>
 							</tr>
 						</tbody>

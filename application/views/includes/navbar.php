@@ -22,7 +22,7 @@
                 if(isset($nisn)){
                     echo '<a href="'.base_url('siswa/logout_siswa').'" class="btn btn-primary btn-lg" role="button">LOGOUT</a>';
                 }
-                if(isset($username)){
+                elseif(isset($username)){
                     echo '<a href="'.base_url('admin/logout_admin').'" class="btn btn-primary btn-lg" role="button">LOGOUT</a>';
                 }
             ?>    

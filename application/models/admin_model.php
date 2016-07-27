@@ -59,7 +59,7 @@ class Admin_model extends CI_Model{
 	}
 
 	function get_all_data(){
-		$data = $this->db->query('SELECT siswa.no_pendaftaran,siswa.nama,sekolah.nama_sekolah,siswa.hasil FROM siswa LEFT JOIN sekolah ON siswa.no_pendaftaran=sekolah.no_pendaftaran');
+		$data = $this->db->query('SELECT siswa.no_pendaftaran,siswa.nama,sekolah.nama_sekolah,siswa.skor, siswa.hasil FROM siswa LEFT JOIN sekolah ON siswa.no_pendaftaran=sekolah.no_pendaftaran');
 		return $data->result();
 	}
 
