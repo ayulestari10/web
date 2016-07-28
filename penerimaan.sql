@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 23, 2016 at 06:51 PM
+-- Generation Time: Jul 28, 2016 at 02:37 AM
 -- Server version: 5.6.26
 -- PHP Version: 5.5.28
 
@@ -69,7 +69,7 @@ INSERT INTO `nilai` (`no_pendaftaran`, `nilai_bing`, `nilai_bindo`, `nilai_matem
 (44, '90', '90', '80', '80'),
 (45, '80', '80', '85', '85'),
 (46, '90', '90', '80', '80'),
-(61, '90', '100', '100', '100');
+(61, '100', '100', '100', '100');
 
 -- --------------------------------------------------------
 
@@ -101,7 +101,7 @@ INSERT INTO `orang_tua` (`no_pendaftaran`, `nama_ayah`, `nama_ibu`, `pekerjaan_a
 (44, 'Sudirman', 'Inah', 'Guru', 'Pedangang'),
 (45, 'Budi Thomas', 'Lela Anisa', 'Karyawan Swa', 'Guru'),
 (46, 'Efand', 'Iska Rinda', 'Guru', 'Karyawan Swa'),
-(61, 'coba', 'coba', 'TNI/POLRI', 'Karyawan Swasata');
+(61, 'coba', 'coba', 'Petani', 'Karyawan Swasata');
 
 -- --------------------------------------------------------
 
@@ -133,7 +133,7 @@ INSERT INTO `sekolah` (`no_pendaftaran`, `nisn`, `nama_sekolah`, `tahun_lulus`, 
 (44, '', 'SMPN 24 Palembang', '2015', '1234576890'),
 (45, '', 'SMPN 01 Palembang', '2016', '12345678911'),
 (46, '', 'SMPN 24 Palembang', '2015', '12345678923'),
-(61, 'yakcoba', 'SMPN 24 Palembang', '2015', '1010101010');
+(61, 'yakcoba', 'SMPN 24 Palembang', '2015', '1010101009');
 
 -- --------------------------------------------------------
 
@@ -146,6 +146,7 @@ CREATE TABLE IF NOT EXISTS `siswa` (
   `no_pendaftaran` int(11) NOT NULL,
   `password` varchar(35) NOT NULL,
   `nama` varchar(30) NOT NULL,
+  `skor` int(3) NOT NULL,
   `hasil` varchar(15) NOT NULL,
   `foto` varchar(30) NOT NULL,
   `jenis_kelamin` varchar(10) NOT NULL,
@@ -163,19 +164,19 @@ CREATE TABLE IF NOT EXISTS `siswa` (
 -- Dumping data for table `siswa`
 --
 
-INSERT INTO `siswa` (`nisn`, `no_pendaftaran`, `password`, `nama`, `hasil`, `foto`, `jenis_kelamin`, `tempat_lahir`, `tanggal`, `bulan`, `tahun`, `alamat_lengkap`, `no_telp_hp`, `email`, `keahlian`) VALUES
-('asdadvadgg', 34, '11111', 'Trikurnia Sari', 'Tidak Lulus', '', '', '', '', '', '', '', '', '', ''),
-('fssaasasas', 35, '11111', 'Pipit Kurnia Sari', 'Lulus', '', '', '', '', '', '', '', '', '', ''),
-('absabaaba', 38, '22222', 'Aliando ', 'Lulus', '', '', '', '', '', '', '', '', '', ''),
-('aafsasfawf', 39, '22222', 'Arjuna Syaputra', 'Tidak Lulus', '', '', '', '', '', '', '', '', '', ''),
-('asfvsrgvgvw', 40, '33333', 'Mutia Dwi Putri', 'Lulus', '', '', '', '', '', '', '', '', '', ''),
-('bagagagaga', 41, '33333', 'Azhary Arliansyah', 'Lulus', '', '', '', '', '', '', '', '', '', ''),
-('ayules', 42, '827ccb0eea8a706c4c34a16891f84e7b', 'Putri Ayu', 'Tidak Lulus', 'ayules.png', 'Perempuan', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'Akuntansi'),
-('09021191520021', 43, '827ccb0eea8a706c4c34a16891f84e7b', 'Lutfi Mattauch', 'Lulus', '09021191520021.png', 'Laki-laki', 'Palembang', '10', '08', '1998', 'Jl. AKBP H. Umar Palemban', '082380817234', 'lutfi_mattauch@gmail.com', 'Akuntansi'),
-('09021181520010', 44, '074189fa65c08ecf15de3b22b757b342', 'Lifya Fitriani', 'Lulus', '09021181520010.png', 'Perempuan', 'Jakarta', '28', '09', '2003', 'KM 5 Palembang', '081289706958', 'lifya_fitriani@yahoo.com', 'Akuntansi'),
-('09021181520012', 45, '827ccb0eea8a706c4c34a16891f84e7b', 'Thomas', 'Lulus', '09021181520012.png', 'Laki-laki', 'Baturaja', '17', '05', '2004', 'Ogan Ilir Indralaya', '082188091232', 'thomas_twin@gmail.com', 'Pemasaran'),
-('09021181520024', 46, '827ccb0eea8a706c4c34a16891f84e7b', 'Ali Akbar', 'Lulus', '09021181520024.png', 'Laki-laki', 'Jakarta', '05', '08', '2003', 'Bom Baru Palembang', '085327619871', 'akbar_Ali@yahoo.co.id', 'Multimedia'),
-('yakcoba', 61, 'd9c30c7b25cfa6c0a92eb4275609164b', 'a', '', '61.png', 'Laki-laki', 'jarai', '09', '11', '1997', 'aa', 'a', 'a', 'Akuntansi');
+INSERT INTO `siswa` (`nisn`, `no_pendaftaran`, `password`, `nama`, `skor`, `hasil`, `foto`, `jenis_kelamin`, `tempat_lahir`, `tanggal`, `bulan`, `tahun`, `alamat_lengkap`, `no_telp_hp`, `email`, `keahlian`) VALUES
+('asdadvadgg', 34, '11111', 'Trikurnia Sari', 100, 'Lulus', '', '', '', '', '', '', '', '', '', ''),
+('fssaasasas', 35, '11111', 'Pipit Kurnia Sari', 40, 'Tidak Lulus', '', '', '', '', '', '', '', '', '', ''),
+('absabaaba', 38, '22222', 'Aliando ', 80, 'Tidak Lulus', '', '', '', '', '', '', '', '', '', ''),
+('aafsasfawf', 39, '22222', 'Arjuna Syaputra', 0, 'Tidak Lulus', '', '', '', '', '', '', '', '', '', ''),
+('asfvsrgvgvw', 40, '33333', 'Mutia Dwi Putri', 0, 'Lulus', '', '', '', '', '', '', '', '', '', ''),
+('bagagagaga', 41, '33333', 'Azhary Arliansyah', 0, 'Lulus', '', '', '', '', '', '', '', '', '', ''),
+('ayules', 42, '827ccb0eea8a706c4c34a16891f84e7b', 'Putri Ayu', 0, 'Tidak Lulus', 'ayules.png', 'Perempuan', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'Akuntansi'),
+('09021191520021', 43, '827ccb0eea8a706c4c34a16891f84e7b', 'Lutfi Mattauch', 0, 'Lulus', '09021191520021.png', 'Laki-laki', 'Palembang', '10', '08', '1998', 'Jl. AKBP H. Umar Palemban', '082380817234', 'lutfi_mattauch@gmail.com', 'Akuntansi'),
+('09021181520010', 44, '074189fa65c08ecf15de3b22b757b342', 'Lifya Fitriani', 0, 'Lulus', '09021181520010.png', 'Perempuan', 'Jakarta', '28', '09', '2003', 'KM 5 Palembang', '081289706958', 'lifya_fitriani@yahoo.com', 'Akuntansi'),
+('09021181520012', 45, '827ccb0eea8a706c4c34a16891f84e7b', 'Thomas', 0, 'Lulus', '09021181520012.png', 'Laki-laki', 'Baturaja', '17', '05', '2004', 'Ogan Ilir Indralaya', '082188091232', 'thomas_twin@gmail.com', 'Pemasaran'),
+('09021181520024', 46, '827ccb0eea8a706c4c34a16891f84e7b', 'Ali Akbar', 0, 'Lulus', '09021181520024.png', 'Laki-laki', 'Jakarta', '05', '08', '2003', 'Bom Baru Palembang', '085327619871', 'akbar_Ali@yahoo.co.id', 'Multimedia'),
+('yakcoba', 61, 'd9c30c7b25cfa6c0a92eb4275609164b', 'Ayu', 100, 'Tidak Lulus', '61.png', 'Laki-laki', 'jarai', '09', '11', '1997', 'aa', 'a', 'a', 'Akuntansi');
 
 --
 -- Indexes for dumped tables
