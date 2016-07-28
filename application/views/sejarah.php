@@ -9,13 +9,16 @@
 	<style type="text/css">
 		p{text-align: justify;}
 		.bigsj{
-			width: 1080px; height: 820px; margin-left: 2%; 
+			width: 1080px; height: 860px; margin-left: 2%; 
 			background-image: url('<?= base_url("images/3.jpg") ?>'); background-size: cover;
 		}
 		.bigContentsj{
 			border-radius: 5%;
 			background-color:rgb(57,167,141);
-			margin-left: 30px; width: 840px; height: 630px;
+			margin-left: 30px; width: 840px; height: 680px;
+		}
+		.contentsj{
+			margin-left: 140px; width: 650px; height: 380px; 
 		}
 		.boxes{background-color: rgb(102, 204, 0);}
 		.footersj{text-align: center; margin-top: 160px;}
@@ -90,13 +93,14 @@
 			<!-- End of sidebar -->
 
 			<!-- Content -->
-			<div class="content">
-				<h3>Sejarah SMK Muhammadiyah 2 Palembang</h3>
-				<div class="isi">
-					<p>SMK Muhammadiyah 2 Palembang didirikan pada tanggal 31 Maret 1988, atas prakarsa Pimpinan Daerah Muhammadiyah Majelis Permusyawaratan dan Kebudayaan Kota Palembang. SK Muhammadiyah Pusat No.43/II-004/SM. SS 88/1988. Pada awalnya, SMK Muhammadiyah 2 Palembang beralamatkan di Jalan Jenderal Ahmad Yani Komplek Perguruan Muhammadiyah 13 Ulu Palembang, kemudian pada tahun 2004 pindah ke Jalan DI. Panjaitan Komplek Muhammadiyah Plaju Palembang. Pada bulan November tahun 2010 SMK Muhammadiyah 2 Palembang pindah ke Jalan  Ahmad Yani Lr. Silaberanti Palembang sampai dengan sekarang.</p>
-					<p>Pada waktu pertama kali berdirinya SMK Muhammadiyah 2 Palembang tahun 1988 memiliki sarana dan prasarana yang masih terbatas dan jumlah siswa yang masih sedikit. Pada tahun 2004 sampai tahun 2005 jumlah siswa saat itu ada 86 orang, namun pada tahun 2009 sampai tahun 2010 jumlah siswa semakin bertambah menjadi 702 siswa. Pada tahun 2010 sampai tahun 2011 jumlah siswa semakin bertambah menjadi 884 siswa hingga pada tahun 2012 sampai tahun 2013 berjumlah 1162 dengan jumlah 516 siswa dan 646 siswi.</p>
-					<p>Awal berdirinya SMK Muhammadiyah 2 Palembang status terdaftar dari tahun 1988 sampai tahun 1990. Pada tahun 1991 status SMK Muhammadiyah 2 Palembang diakui berdasarkan SK Dirjen Pendidikan Dasar dan Menengah No.273/C.C7/Kep/MN/1999. Pada tahun 2011 berdasarkan Keputusan Badan Akreditasi Sekolah (BAS) Provinsi Sumatera Selatan dalam akreditasi tersebut SMK Muhammadiyah 2 Palembang ditetapkan berstatus Terakreditasi A.</p>
-					<p>Kepala Sekolah dari awal berdirinya sampai sekarang mengalami perubahan sebanyak empat kali, yaitu pada tahun 1988 sampai tahun 2001 yang menjabat sebagai kepala sekolah adalah Bapak Drs. A. Fauzi Hasan. Pada tahun 2001 sampai  tahun 2005 dijabat oleh Bapak Drs. Abdul Latif, kemudian pada tahun 2005 sampai tahun 2009 dijabat oleh Ibu Seriyani, S.Pd. Pada tahun  2009 sampai tahun 2014 kepala sekolah masih tetap dijabat oleh Ibu Seriyani, S.Pd. Pada tahun 2015 hingga sekarang kepala sekolah SMK Muhammadiyah 2 Palembang dijabat oleh Ibu Yulia Andriani, S.E.</p>
+			<div class="contentsj"  style="margin-bottom: -10%;">
+				<div class="col-md-12">
+					<h3>Sejarah SMK Muhammadiyah 2 Palembang</h3>
+						<p>SMK Muhammadiyah 2 Palembang didirikan pada tanggal 31 Maret 1988, atas prakarsa Pimpinan Daerah Muhammadiyah Majelis Permusyawaratan dan Kebudayaan Kota Palembang. SK Muhammadiyah Pusat No.43/II-004/SM. SS 88/1988. Pada awalnya, SMK Muhammadiyah 2 Palembang beralamatkan di Jalan Jenderal Ahmad Yani Komplek Perguruan Muhammadiyah 13 Ulu Palembang, kemudian pada tahun 2004 pindah ke Jalan DI. Panjaitan Komplek Muhammadiyah Plaju Palembang. Pada bulan November tahun 2010 SMK Muhammadiyah 2 Palembang pindah ke Jalan  Ahmad Yani Lr. Silaberanti Palembang sampai dengan sekarang.</p>
+						<p>Pada waktu pertama kali berdirinya SMK Muhammadiyah 2 Palembang tahun 1988 memiliki sarana dan prasarana yang masih terbatas dan jumlah siswa yang masih sedikit. Pada tahun 2004 sampai tahun 2005 jumlah siswa saat itu ada 86 orang, namun pada tahun 2009 sampai tahun 2010 jumlah siswa semakin bertambah menjadi 702 siswa. Pada tahun 2010 sampai tahun 2011 jumlah siswa semakin bertambah menjadi 884 siswa hingga pada tahun 2012 sampai tahun 2013 berjumlah 1162 dengan jumlah 516 siswa dan 646 siswi.</p>
+						<p>Awal berdirinya SMK Muhammadiyah 2 Palembang status terdaftar dari tahun 1988 sampai tahun 1990. Pada tahun 1991 status SMK Muhammadiyah 2 Palembang diakui berdasarkan SK Dirjen Pendidikan Dasar dan Menengah No.273/C.C7/Kep/MN/1999. Pada tahun 2011 berdasarkan Keputusan Badan Akreditasi Sekolah (BAS) Provinsi Sumatera Selatan dalam akreditasi tersebut SMK Muhammadiyah 2 Palembang ditetapkan berstatus Terakreditasi A.</p>
+						<p>Kepala Sekolah dari awal berdirinya sampai sekarang mengalami perubahan sebanyak empat kali, yaitu pada tahun 1988 sampai tahun 2001 yang menjabat sebagai kepala sekolah adalah Bapak Drs. A. Fauzi Hasan. Pada tahun 2001 sampai  tahun 2005 dijabat oleh Bapak Drs. Abdul Latif, kemudian pada tahun 2005 sampai tahun 2009 dijabat oleh Ibu Seriyani, S.Pd. Pada tahun  2009 sampai tahun 2014 kepala sekolah masih tetap dijabat oleh Ibu Seriyani, S.Pd. Pada tahun 2015 hingga sekarang kepala sekolah SMK Muhammadiyah 2 Palembang dijabat oleh Ibu Yulia Andriani, S.E.</p>
+					
 				</div>
 			</div>
 

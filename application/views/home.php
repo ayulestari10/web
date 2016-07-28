@@ -74,18 +74,20 @@
 
 			<!-- Content -->
 			<div class="content">
-				<h3>Selamat Datang di Website<br>SMK Muhammadiyah 2 Palembang</h3>
-				<div class="isi">
-					<h5>Syarat-syarat pendaftaran :</h5>
-					<ol>
-						<li>Pendaftaran dimulai tanggal 1 Juni 2016 sampai 10 Juli 2016</li>
-						<li>Nilai Ujian Nasional untuk mata pelajaran Bahasa Inggris, Bahasa Indonesia, Matematika dan IPA minimal 65</li>
-						<li>Mengisi Formulir secara online pada menu Pendaftaran yang ada di website ini</li>
-						<li>Sehat jasmani dan rohani</li>
-						<li>Berasal dari SMP/ MTs Negeri dan Swasta di seluruh Indonesia</li>
-						<li>Mengikuti ujian tertulis pada hari Senin, 11 Juli 2016 dengan membawa nomor ujian</li>
-						<li>Hasil akhir akan diumumkan melalui website ini pada hari Senin, 18 Juli 2016</li>
-					</ol> 
+				<div class="col-md-10" style="margin: 0 auto;">
+					<h3>Selamat Datang di Website<br>SMK Muhammadiyah 2 Palembang</h3>
+					<div class="isi">
+						<h5>Syarat-syarat pendaftaran :</h5>
+						<ol>
+							<li>Pendaftaran dimulai tanggal 1 Juni 2016 sampai 10 Juli 2016</li>
+							<li>Nilai Ujian Nasional untuk mata pelajaran Bahasa Inggris, Bahasa Indonesia, Matematika dan IPA minimal 65</li>
+							<li>Mengisi Formulir secara online pada menu Pendaftaran yang ada di website ini</li>
+							<li>Sehat jasmani dan rohani</li>
+							<li>Berasal dari SMP/ MTs Negeri dan Swasta di seluruh Indonesia</li>
+							<li>Mengikuti ujian tertulis pada hari Senin, 11 Juli 2016 dengan membawa nomor ujian</li>
+							<li>Hasil akhir akan diumumkan melalui website ini pada hari Senin, 18 Juli 2016</li>
+						</ol> 
+					</div>
 				</div>
 			</div>
 			<!-- End of content -->			

@@ -104,32 +104,34 @@
 
 			<!-- Content -->
 			<div class="pengumuman">
-				<div class="title">
-					<h3 style="text-align: center;">Hasil Seleksi Penerimaan Siswa Baru<br>
-					SMK Muhammadiyah 2 Palembang</h3>
-				</div>
-				<div class="isipg">
-					<table class="table table-bordered">
-						<thead>
-							<th class="success" style="width:10px;text-align: center;">No</th>
-							<th class="success" style="width:50px;text-align: center;">No Reg</th>
-							<th class="success" style="width:200px;text-align: center;">Nama</th>
-							<th class="success" style="width:200px;text-align: center;">Asal Sekolah</th>
-							<th class="success" style="width:60px;text-align: center; ">Hasil</th>
-						</thead>
-						<tbody>
-							<?php $i = 0; ?>
-							<?php foreach($dt as $data): ?>
-							<tr class="success">
-								<td><?= ++$i ?></td>
-								<td><?= $data->no_pendaftaran ?></td>
-								<td><?= $data->nama ?></td>
-								<td><?= $data->nama_sekolah ?></td>
-								<td><?= $data->hasil ?></td>
-							</tr>
-							<?php endforeach; ?>
-						</tbody>
-					</table>
+				<div class="col-md-10" style="margin: 0 auto;">
+					<div class="title">
+						<h3 style="text-align: center;">Hasil Seleksi Penerimaan Siswa Baru<br>
+						SMK Muhammadiyah 2 Palembang</h3>
+					</div>
+					<div class="isipg">
+						<table class="table table-bordered">
+							<thead>
+								<th class="success" style="width:10px;text-align: center;">No</th>
+								<th class="success" style="width:50px;text-align: center;">No Reg</th>
+								<th class="success" style="width:200px;text-align: center;">Nama</th>
+								<th class="success" style="width:200px;text-align: center;">Asal Sekolah</th>
+								<th class="success" style="width:60px;text-align: center; ">Hasil</th>
+							</thead>
+							<tbody>
+								<?php $i = 0; ?>
+								<?php foreach($dt as $data): ?>
+								<tr class="success">
+									<td><?= ++$i ?></td>
+									<td><?= $data->no_pendaftaran ?></td>
+									<td><?= $data->nama ?></td>
+									<td><?= $data->nama_sekolah ?></td>
+									<td><?= $data->hasil ?></td>
+								</tr>
+								<?php endforeach; ?>
+							</tbody>
+						</table>
+					</div>
 				</div>
 			</div>
 			<!-- End of content -->			

@@ -26,11 +26,10 @@
 		background-color: rgb(102, 204, 0);
 	}
 	.content{
-		margin-left: 130px; width: 650px; height: 320px;
+		margin-left: 130px; width: 650px; height: 320px; margin: 0 auto;
 	}
 	ol li{font-size: 14px;}
 	h3{text-align: center;}
-	.isi{margin-top: 5%; margin-left: 4%;}
 	.footer{text-align: center; margin-top: -35px;}
 	.kalender{
 		height: 280px; width: 170px; margin-left: 870px;

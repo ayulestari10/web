@@ -101,8 +101,10 @@
 
 			<!-- Content -->
 			<div class="contentso">
-				<h3>Struktur Organisasi<br>SMK Muhammadiyah 2 Palembang</h3>
-				<img src="<?= base_url('images/so.jpg') ?>" width="600" height="560" style="border-radius: 10%;" />
+				<div class="col-md-10" style="margin: 0 auto;">
+					<h3>Struktur Organisasi<br>SMK Muhammadiyah 2 Palembang</h3>
+					<img src="<?= base_url('images/so.jpg') ?>" width="600" height="560" style="border-radius: 10%;" />
+				</div>
 			</div>
 
 			<!-- End of content -->			

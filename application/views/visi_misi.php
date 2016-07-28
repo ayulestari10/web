@@ -77,18 +77,20 @@
 
 			<!-- Content -->
 			<div class="content">
-				<h3>Visi dan Misi<br> SMK Muhammadiyah 2 Palembang</h3>
-				<div class="isi">
-					<ul>
-						<li>Visi</li>
-							<p>Menghasilkan output yang unggul, mandiri, profesionalisme, produktif dan berjiwa wiraswasta sesuai tuntutan islam dan berasaskan pancasila.</p>
-						<li>Misi</li>
-						<ol>
-							<li>Meningkatkan profesionalisme siswa, guru dan pegawai sesuai dengan bidang masing-masing.</li>
-							<li>Terciptanya kerjasama saling menguntungkan dengan dinas/ instansi, dunia usaha dan dunia industri.</li>
-							<li>SMK Muhammadiyah 2 Palembang menjadi sekolah yang bersifat ke-Islaman, ke-Indonesiaan, ke-Ilmuan dan Ke-Mandirian.</li>
-						</ol>
-					</ul>
+				<div class="col-md-10" style="margin: 0 auto;">
+					<h3>Visi dan Misi<br> SMK Muhammadiyah 2 Palembang</h3>
+					<div class="isi">
+						<ul>
+							<li>Visi</li>
+								<p>Menghasilkan output yang unggul, mandiri, profesionalisme, produktif dan berjiwa wiraswasta sesuai tuntutan islam dan berasaskan pancasila.</p>
+							<li>Misi</li>
+							<ol>
+								<li>Meningkatkan profesionalisme siswa, guru dan pegawai sesuai dengan bidang masing-masing.</li>
+								<li>Terciptanya kerjasama saling menguntungkan dengan dinas/ instansi, dunia usaha dan dunia industri.</li>
+								<li>SMK Muhammadiyah 2 Palembang menjadi sekolah yang bersifat ke-Islaman, ke-Indonesiaan, ke-Ilmuan dan Ke-Mandirian.</li>
+							</ol>
+						</ul>
+					</div>
 				</div>
 			</div>
 
