@@ -179,13 +179,13 @@
 	<!-- End of Biodata Orang Tua -->
 		<div class="row" style="margin-top: 2%;">
 			<div class="col-md-2 col-md-offset-3">
-				<a href="<?= base_url('siswa') ?>" class="btn btn-info">Edit Data</a>
+			<a href="<?= base_url('siswa') ?>" class="btn btn-info">Edit Data</a>
 			</div>
 			<div class="col-md-2">
-				<a href="<?= base_url('siswa/kartu_peserta') ?>" class="btn btn-danger">Cetak Kartu</a>
-			</div>
-			<div class="col-md-2">
-				<a href="<?= base_url('siswa/formulir') ?>" class="btn btn-warning">Cetak Formulir</a>
-			</div>
+		      <a href="<?= base_url('siswa/kartu_peserta') ?>" class="btn btn-danger">Cetak Kartu</a>
+		   </div>
+		   <div class="col-md-2">
+		      <a href="<?= base_url('siswa/formulir') ?>" class="btn btn-warning">Cetak Formulir</a>
+		   </div>
 		</div>
 </div>

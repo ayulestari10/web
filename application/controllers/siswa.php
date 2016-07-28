@@ -19,7 +19,7 @@ class Siswa extends CI_Controller{
 		$data = array(
 			'data_siswa' 		=> $this->siswa_model->get_data_byno_pendaftaran($this->session->userdata('no_pendaftaran')),
 			'title'				=> 'Penerimaan Siswa Baru',
-			'content'			=> 'input_data'
+			'content'			=> 'biodata'
 		);
 		$this->load->view('includes/template', $data);
 	}
@@ -57,7 +57,7 @@ class Siswa extends CI_Controller{
 		$data = array(
 			'data_siswa' 	=> $this->siswa_model->get_data_byno_pendaftaran($this->session->userdata('no_pendaftaran')),
 			'title'			=> 'Lengkapi Data | Penerimaan Siswa Baru',
-			'content'		=> 'input_data'
+			'content'		=> 'biodata'
 		);
 		$this->load->view('includes/template', $data);
 

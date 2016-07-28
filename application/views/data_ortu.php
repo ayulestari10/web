@@ -155,13 +155,13 @@ s
     <input type="submit" value="Simpan" class="btn btn-success" name="input_ortu"/>
    </div>
    <div class="col-md-2">
-    <a href="<?= base_url('siswa/periksa') ?>" class="btn btn-info">View</a>
+      <a href="<?= base_url('siswa/periksa') ?>" class="btn btn-info">View</a>
    </div>
    <div class="col-md-2">
-    <a href="<?= base_url('siswa/kartu_peserta') ?>" class="btn btn-danger">Cetak Kartu</a>
+      <a href="<?= base_url('siswa/kartu_peserta') ?>" class="btn btn-danger">Cetak Kartu</a>
    </div>
    <div class="col-md-2">
-    <a href="<?= base_url('siswa/formulir') ?>" class="btn btn-warning">Cetak Formulir</a>
+      <a href="<?= base_url('siswa/formulir') ?>" class="btn btn-warning">Cetak Formulir</a>
    </div>
   </div>
  </div>

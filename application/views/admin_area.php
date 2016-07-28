@@ -5,7 +5,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-2" style="margin-bottom: 2%;">
-			<a href="<?= base_url('admin/cetak_pengumuman') ?>"><button  class="btn btn-danger">Cetak Pengumuman</button></a>
+			<a href="<?= base_url('admin/cetak_pengumuman') ?>"><li class="glyphicon glyphicon-print"><button  class="btn btn-danger">Cetak Pengumuman</button></li></a>
 		</div>
 		<div class="col-md-11" style="margin-left: -10%;">
 			<h2 style="text-align: center;">Data Calon Siswa</h1>
